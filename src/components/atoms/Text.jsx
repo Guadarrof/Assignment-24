@@ -2,7 +2,7 @@ import { createElement } from 'react'
 
 function Text({ renderAs, content, className}) {
     return (
-        createElement(renderAs, className, content)
+        createElement(renderAs, {className}, content)
     )
 }
 

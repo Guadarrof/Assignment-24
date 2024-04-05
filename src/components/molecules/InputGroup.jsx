@@ -2,19 +2,18 @@ import React from "react";
 
 const InputGroup = ({
   labelClass,
+  labelText,
   inputClass,
   inputType = "text",
   inputId,
-  value = "",
   action
 }) => {
   return (
     <div className="input_group">
-      <label for={inputId} className={labelClass} />
+      <label htmlFor={inputId} className={labelClass}/>{labelText}
       <input
         type={inputType}
         id={inputId}
-        value={value}
         className={inputClass}
         onChange={action}
       />
