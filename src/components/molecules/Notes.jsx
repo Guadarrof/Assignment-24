@@ -6,29 +6,33 @@ const Notes = ({ deleteAction, editAction, notes }) => {
   if (notes.length === 0) {
     return (
       <div className="empty-message">
-        <p>No hay nota disponible.</p>
+        <p>No hay nota/s disponible/s.</p>
       </div>
     );
   } else {
     return (
-      <div>
+      <>
         {notes.map((newNote) => (
           <div className="note" key={newNote.id}>
             <Button
               className="btn-delete"
               btnText="x"
-              action={deleteAction(newNote.id)}
+              action={()=>deleteAction(newNote.id)}
             />
-            <Text
-              renderAs="h3"
-              className="note-title"
-              content={newNote.title}
-            />
-            <Text
-              renderAs="p"
-              className="note-content"
-              content={newNote.content}
-            />
+            {newNote.title && (
+              <Text
+                renderAs="h3"
+                className="note-title"
+                content={newNote.title}
+              />
+            )}
+            {newNote.content && (
+              <Text
+                renderAs="p"
+                className="note-content"
+                content={newNote.content}
+              />
+            )}
             <Button
               className="btn-edit"
               btnText="Edit"
@@ -36,7 +40,7 @@ const Notes = ({ deleteAction, editAction, notes }) => {
             />
           </div>
         ))}
-      </div>  
+      </>  
     );
   }
 };

@@ -4,6 +4,7 @@ import Button from "../components/molecules/Button";
 import { useState, useEffect} from "react";
 import { saveNote, editAction, deleteAction } from "../helpers";
 import Notes from "../components/molecules/Notes";
+import Text from "../components/atoms/Text";
 
 const Home = () => {
   const [noteTitle, setNoteTitle] = useState("");
@@ -36,6 +37,11 @@ const Home = () => {
 
   return (
     <>
+    <Text
+    renderAs="h1"
+    className="page-title"
+    content='Mis notas'
+    />
       <div className="inputs-container">
         <InputGroup
           labelText="Titulo"

@@ -1,0 +1,95 @@
+.input_group{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.note{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    padding: 2%;
+    justify-content: space-between;
+    
+}
+.note:nth-of-type(odd){
+    background-color: rgb(175, 242, 240);
+}
+
+.note:nth-of-type(even){
+    background-color: rgb(240, 213, 192);
+}
+
+.btn-delete{
+    align-self: flex-end;
+    border: none;
+    border-radius: 9px/9px;
+    background-color: white;
+    margin: 2%;
+}
+
+.note-title{
+    margin-top: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+}
+
+.note-content{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-edit{
+    align-self: flex-end;
+    background-color: white;
+    color: rgb(42, 59, 58);
+    border: none;
+    padding: 0.25rem 1rem;
+}
+
+.btn-save{
+    border: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    margin-top: 3%;
+    width: fit-content;
+    align-self: center;
+}
+
+.btn-save:hover{
+    color: white;
+    background-color: rgb(88, 124, 122);
+}
+
+.inputs-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+}
+
+.notes-container{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.note-content{
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+.page-title{
+    margin: 4%;
+    color: rgb(88, 124, 122);
+}
+
+#note-content{
+    height: 100px;
+}
